@@ -1,0 +1,26 @@
+import random
+vitoria = 0
+while True:
+    jogador = int(input("Diga um valor: "))
+    computador = random.randint(0, 11)
+    total = jogador + computador
+    pi = " "
+    while pi not in "PI":
+        pi = str(input("Quer jogar em Par ou Impar [P/I]? ")).strip().upper()[0]
+    print("Você jogou {} e o computador jogou {} total de {}".format(jogador, computador, total))
+    if pi == "P":
+        if total % 2 == 0:
+            print("Você ganhou!")
+            vitoria += 1
+        else:
+            print("Você perdeu")
+            break
+    elif pi == "I":
+        if total % 2 == 1:
+            print("Você ganhou!")
+            vitoria += 1
+        else:
+            print("Você perdeu")
+            break
+    print("Vamos jogar novamente...")
+print("Game Over! Você venceu {} vezes".format(vitoria))
