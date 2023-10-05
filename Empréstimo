@@ -1,0 +1,13 @@
+casa = float(input("Boa tarde meu bom senhor(a), qual é o valor da casa? "))
+salario = float(input("Qual é o seu salário meu bom senhor(a)? "))
+anos = int(input("Em quantos anos você deseja pagar a casa? "))
+# Calcula o valor mensal do boleto
+# nao pode exceder em 30% ou será negado
+boleto = casa/(anos*12)  # *12 para atribuir os messes
+print("Em {} anos, as parcelas ficariam no valor de {:.2f}R$".format(anos,boleto,))
+conta = salario*1.3-salario  # 30% do salario
+if conta < boleto:
+    print("Meu bom senhor(a), por conta de seu salário não atingir os atributos nessesarios será NEGADO o emprestimo")
+else:
+    print("Será um prazer fazer negocios com você, seu emprestimo foi APROVADO!")
+    
