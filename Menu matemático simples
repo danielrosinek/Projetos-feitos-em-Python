@@ -1,0 +1,21 @@
+m = 0
+n1 = int(input("Primeiro valor: "))
+n2 = int(input("Segundo valor: "))
+while m != 5:
+    print('''[1] Somar\n[2] multiplicar\n[3] maior\n[4] novos números\n[5] sair do programa''')
+    m = int(input())
+    if m == 1:
+        soma = n1 + n2
+        print("A soma entre eles é: {}\n".format(soma))
+    if m == 2:
+        mult = n1 * n2
+        print("A multiplicação entre eles fica: {}\n".format(mult))
+    if m == 3:
+        if n1 > n2:
+            print("entre eles o {} é maior.\n".format(n1))
+        else:
+            print("entre eles o {} é maior.\n".format(n2))
+    if m == 4:
+        n1 = int(input("Primeiro valor: \n"))
+        n2 = int(input("Segundo valor: \n"))
+print("Fim")
