@@ -1,0 +1,18 @@
+valor = float(input("Qual é o valor das suas compras? "))
+print(""" [1] Dinehiro/Cheque \n [2] Á vista no cartão \n [3] 2x no cartão \n [4] 3x ou mais""")
+p = float(input(" Digite a opção de pagamento: "))
+if p == 1:
+    valor = valor * 0.9
+    print("O valor total será: {}R$".format(valor))
+elif p == 2:
+    valor = valor * 0.95
+    print("O valor total será: {}R$".format(valor))
+elif p == 3:
+    v = valor / 2
+    print("Em 2x de {} o valor total será: {}R$".format(v,valor))
+else:
+    valor = valor * 1.2
+    parc = int(input(" Em quantas parcelas? "))
+    v = valor/parc
+    print(" Sua compra será parcelada em {}x de {:.2f}R$ \n Com os juros ficará um total de: {:.2f}R$".format(parc,v,valor))
+    
